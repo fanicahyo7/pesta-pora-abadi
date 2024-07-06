@@ -36,23 +36,6 @@ class HomeTab extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      "Halo! ",
-                      style: GoogleFonts.montserrat(
-                          fontSize: height * 0.03, fontWeight: FontWeight.w300),
-                    ),
-                    Image.asset(
-                      "assets/hi.gif",
-                      height: height * 0.05,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: height * 0.04,
-                ),
                 Text(
                   "Fani Dwi",
                   style: GoogleFonts.montserrat(

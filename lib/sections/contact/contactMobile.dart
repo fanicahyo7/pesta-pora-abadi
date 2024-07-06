@@ -13,7 +13,7 @@ class ContactMobileTab extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "\nContact",
+            "\nWhat's Next?",
             style: GoogleFonts.montserrat(
               fontSize: height * 0.06,
               fontWeight: FontWeight.w100,
@@ -21,22 +21,22 @@ class ContactMobileTab extends StatelessWidget {
             ),
           ),
           Text(
-            "Let's get in touch and build something together :)\n\n",
+            "Yang saya kerjakan selanjutnya\n\n",
             style: GoogleFonts.montserrat(fontWeight: FontWeight.w200),
             textAlign: TextAlign.center,
           ),
           CarouselSlider.builder(
-            itemCount: 3,
+            itemCount: 2,
             itemBuilder: (BuildContext context, int itemIndex, int i) =>
                 Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
               child: ProjectCard(
                 cardHeight: 300,
                 cardWidth: width > 480 ? width * 0.5 : width * 0.8,
-                projectIconData: kContactIcons[i],
+                projectIcon: kContactIcons[i],
                 projectTitle: kContactTitles[i],
                 projectDescription: kContactDetails[i],
-                projectLink: kContactLinks[i],
+                ontap: () {},
               ),
             ),
             options: CarouselOptions(

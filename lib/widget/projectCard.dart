@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatefulWidget {
   final String? projectIcon;
   final IconData? projectIconData;
   final String projectTitle;
   final String projectDescription;
-  final String projectLink;
   final double cardWidth;
   final double cardHeight;
   final String? backImage;
   final Widget? bottomWidget;
+  final Function()? ontap;
 
   const ProjectCard(
       {Key? key,
@@ -21,10 +20,10 @@ class ProjectCard extends StatefulWidget {
       this.projectIcon,
       required this.projectTitle,
       required this.projectDescription,
-      required this.projectLink,
       this.projectIconData,
       required this.cardWidth,
-      required this.cardHeight})
+      required this.cardHeight,
+      required this.ontap})
       : super(key: key);
   @override
   _ProjectCardState createState() => _ProjectCardState();
@@ -38,7 +37,7 @@ class _ProjectCardState extends State<ProjectCard> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return InkWell(
-      onTap: () => launch(widget.projectLink),
+      onTap: widget.ontap,
       onHover: (isHovering) {
         if (isHovering) {
           setState(() {
@@ -78,13 +77,13 @@ class _ProjectCardState extends State<ProjectCard> {
                         height: height * 0.1,
                       )
                     : Container(),
-                widget.projectIconData != null
-                    ? Icon(
-                        widget.projectIconData,
-                        color: kPrimaryColor,
-                        size: height * 0.1,
-                      )
-                    : Container(),
+                // widget.projectIconData != null
+                //     ? Icon(
+                //         widget.projectIconData,
+                //         color: kPrimaryColor,
+                //         size: height * 0.1,
+                //       )
+                //     : Container(),
                 SizedBox(
                   height: height * 0.02,
                 ),

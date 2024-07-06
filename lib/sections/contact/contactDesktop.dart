@@ -16,7 +16,7 @@ class ContactDesktop extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "\nContact",
+            "\nWhat's Next?",
             style: GoogleFonts.montserrat(
               fontSize: height * 0.06,
               fontWeight: FontWeight.w100,
@@ -24,8 +24,11 @@ class ContactDesktop extends StatelessWidget {
             ),
           ),
           Text(
-            "Let's get in touch and build something together :)\n\n",
+            "Yang saya kerjakan selanjutnya\n\n",
             style: GoogleFonts.montserrat(fontWeight: FontWeight.w200),
+          ),
+          SizedBox(
+            height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -34,10 +37,12 @@ class ContactDesktop extends StatelessWidget {
                 child: ProjectCard(
                   cardWidth: width < 1200 ? width * 0.25 : width * 0.2,
                   cardHeight: width < 1200 ? height * 0.28 : height * 0.25,
-                  projectIconData: kContactIcons[0],
+                  projectIcon: kContactIcons[0],
                   projectTitle: kContactTitles[0],
                   projectDescription: kContactDetails[0],
-                  projectLink: kContactLinks[0],
+                  ontap: () {
+                    
+                  },
                 ),
               ),
               SizedBox(
@@ -47,23 +52,10 @@ class ContactDesktop extends StatelessWidget {
                 child: ProjectCard(
                   cardWidth: width < 1200 ? width * 0.25 : width * 0.2,
                   cardHeight: width < 1200 ? height * 0.28 : height * 0.25,
-                  projectIconData: kContactIcons[1],
+                  projectIcon: kContactIcons[1],
                   projectTitle: kContactTitles[1],
                   projectDescription: kContactDetails[1],
-                  projectLink: kContactLinks[1],
-                ),
-              ),
-              SizedBox(
-                width: width * 0.02,
-              ),
-              WidgetAnimator(
-                child: ProjectCard(
-                  cardWidth: width < 1200 ? width * 0.25 : width * 0.2,
-                  cardHeight: width < 1200 ? height * 0.28 : height * 0.25,
-                  projectIconData: kContactIcons[2],
-                  projectTitle: kContactTitles[2],
-                  projectDescription: kContactDetails[2],
-                  projectLink: kContactLinks[2],
+                  ontap: () {},
                 ),
               ),
             ],

@@ -1,6 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:satyam_website/page/dry_page.dart';
 import '../../constants.dart';
+import '../../page/obs_page.dart';
+import '../../page/sosialisasi_page.dart';
 import '../../widget/projectCard.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +17,7 @@ class PortfolioMobileTab extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "\nPortfolio",
+            "\nProjects",
             style: GoogleFonts.montserrat(
               fontSize: height * 0.06,
               fontWeight: FontWeight.w100,
@@ -21,12 +25,12 @@ class PortfolioMobileTab extends StatelessWidget {
             ),
           ),
           Text(
-            "Here are few samples of my previous work :)\n\n",
+            "Project saya di PT. Pesta Pora Abadi\n\n",
             style: GoogleFonts.montserrat(fontWeight: FontWeight.w200),
             textAlign: TextAlign.center,
           ),
           CarouselSlider.builder(
-            itemCount: 6,
+            itemCount: 3,
             itemBuilder: (BuildContext context, int itemIndex, int i) =>
                 Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -36,7 +40,18 @@ class PortfolioMobileTab extends StatelessWidget {
                 projectIcon: kProjectsIcons[i],
                 projectTitle: kProjectsTitles[i],
                 projectDescription: kProjectsDescriptions[i],
-                projectLink: kProjectsLinks[i],
+                ontap: () {
+                  Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        child: (i == 0)
+                            ? SosialisasiPage()
+                            : (i == 1)
+                                ? OBSPage()
+                                : DryPage()),
+                  );
+                },
               ),
             ),
             options: CarouselOptions(
@@ -47,24 +62,6 @@ class PortfolioMobileTab extends StatelessWidget {
                 autoPlayCurve: Curves.fastOutSlowIn,
                 autoPlayAnimationDuration: Duration(milliseconds: 800),
                 enableInfiniteScroll: false),
-          ),
-          SizedBox(
-            height: height * 0.03,
-          ),
-          MaterialButton(
-            hoverColor: kPrimaryColor.withAlpha(150),
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5.0),
-                side: BorderSide(color: kPrimaryColor)),
-            onPressed: () {
-              launchURL("https://github.com/SatYu26");
-            },
-            child: Text(
-              "See More",
-              style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.w200,
-              ),
-            ),
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
+import 'dart:html' as html;
 
 class SocialMediaIconBtn extends StatelessWidget {
   final String icon;
@@ -22,9 +23,15 @@ class SocialMediaIconBtn extends StatelessWidget {
           height: height,
         ),
         iconSize: height,
-        onPressed: () => launchURL(socialLink),
+        onPressed: ()  {
+          html.window.open(socialLink, '_blank');
+        },
         hoverColor: kPrimaryColor,
       ),
     );
   }
+}
+
+void launchURL(String url) {
+  html.window.open(url, '_blank');
 }

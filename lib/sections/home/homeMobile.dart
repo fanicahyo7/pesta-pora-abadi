@@ -42,21 +42,6 @@ class _HomeMobileState extends State<HomeMobile> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      "Halo! ",
-                      style: GoogleFonts.montserrat(
-                          fontSize: height * 0.025,
-                          fontWeight: FontWeight.w200),
-                    ),
-                    Image.asset("assets/hi.gif", height: height * 0.03),
-                  ],
-                ),
-                SizedBox(
-                  height: height * 0.01,
-                ),
                 Text(
                   "Fani Dwi",
                   style: GoogleFonts.montserrat(

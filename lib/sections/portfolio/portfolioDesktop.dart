@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:satyam_website/page/dry_page.dart';
+import 'package:satyam_website/page/obs_page.dart';
+import 'package:satyam_website/page/sosialisasi_page.dart';
 import '../../animations/bottomAnimation.dart';
 import '../../widget/projectCard.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,12 +51,21 @@ class PortfolioDesktop extends StatelessWidget {
                     projectIcon: kProjectsIcons[index],
                     projectTitle: kProjectsTitles[index],
                     projectDescription: kProjectsDescriptions[index],
-                    projectLink: kProjectsLinks[index],
                     bottomWidget: Container(),
+                    ontap: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child: (index == 0)
+                                ? SosialisasiPage()
+                                : (index == 1) ? OBSPage() : DryPage()),
+                      );
+                    },
                   ),
                 );
               },
-              itemCount: 6,
+              itemCount: 3,
             ),
           ),
           SizedBox(

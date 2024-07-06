@@ -58,4 +58,9 @@ List<Kerja> listKerja = [
       nama: 'TOGAMAS',
       posisi: 'IT PROGRAMMER',
       tahun: '2019 - 2024'),
+  // Kerja(
+  //     gambar: 'assets/ppa.jpg',
+  //     nama: 'PT. PESTA PORA ABADI',
+  //     posisi: 'Development Application',
+  //     tahun: '2024-Sekarang')
 ];

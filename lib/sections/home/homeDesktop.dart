@@ -1,11 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import '../../animations/bottomAnimation.dart';
 import '../../animations/entranceFader.dart';
 import '../../constants.dart';
 import '../../widget/socialMediaIcon.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 class HomeDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -115,14 +113,25 @@ class HomeDesktop extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     for (int i = 0; i < kSocialIcons.length; i++)
-                      WidgetAnimator(
+                      EntranceFader(
+                        duration: Duration(seconds: 1),
+                        offset: Offset(0, -20),
+                        delay: Duration(seconds: 4),
                         child: SocialMediaIconBtn(
                           icon: kSocialIcons[i],
                           socialLink: kSocialLinks[i],
                           height: height * 0.035,
                           horizontalPadding: width * 0.005,
                         ),
-                      )
+                      ),
+                    // WidgetAnimator(
+                    //   child: SocialMediaIconBtn(
+                    //     icon: kSocialIcons[i],
+                    //     socialLink: kSocialLinks[i],
+                    //     height: height * 0.035,
+                    //     horizontalPadding: width * 0.005,
+                    //   ),
+                    // )
                   ],
                 )
               ],

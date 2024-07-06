@@ -13,7 +13,7 @@ class Footer extends StatelessWidget {
       color: Colors.grey[900],
       child: Center(
         child: Text(
-          "©Fani Dwi Cahyo",
+          "©Fani Dwi Cahyo | PT. Pesta Pora Abadi",
           style: GoogleFonts.montserrat(fontWeight: FontWeight.w100),
         ),
       ),
