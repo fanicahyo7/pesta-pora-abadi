@@ -144,7 +144,7 @@ class _DryPageState extends State<DryPage> {
               ),
               const SizedBox(height: 10),
               Center(
-                child: ImageZoomWidget(imagePath: 'assets/projects/incoming.jpg'),
+                child: ImageZoomWidget(imagePath: 'assets/projects/Incoming.jpg'),
               ),
               const SizedBox(height: 30),
               Text(

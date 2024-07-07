@@ -38,11 +38,11 @@ class SosialisasiPage extends StatelessWidget {
                     'Peserta : PIC Produksi',
                   ],
                   'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim produksi. Kegiatan berjalan dengan lancar.',
-                  'assets/images/produksi.jpg'),
+                  'assets/projects/prod.jpg'),
               const SizedBox(height: 20),
               _buildSession(
                   'Sesi 2: Sosialisasi di Warehouse',
-                  'Tanggal: 15 Mei 2024',
+                  'Tanggal: 15-16 Mei 2024',
                   'Tempat: Warehouse',
                   [
                     '1. Pengenalan Sistem dan Tujuan Sosialisasi',
@@ -53,12 +53,12 @@ class SosialisasiPage extends StatelessWidget {
                     'Peserta : PIC INCOMING dan OUTGOING',
                   ],
                   'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim warehouse. Kegiatan berjalan dengan lancar.',
-                  'assets/images/warehouse.jpg' // Path gambar
+                  'assets/projects/wh.jpg' // Path gambar
                   ),
               const SizedBox(height: 20),
               _buildSession(
                   'Sesi 3: Sosialisasi di RESTO JATIM 1',
-                  'Tanggal: 16-17 Mei 2024',
+                  'Tanggal: 17 Mei 2024',
                   'Tempat: Resto Gacoan Malang Sukun,Jakarta,Dinoyo,Batu',
                   [
                     '1. Pengenalan Sistem dan Tujuan Sosialisasi',
@@ -67,7 +67,7 @@ class SosialisasiPage extends StatelessWidget {
                   ],
                   ['Peserta : SM,Stocker'],
                   'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim Resto jatim 1 (malang). Kegiatan berjalan dengan lancar.',
-                  'assets/images/malang_batu.jpg' // Path gambar
+                  'assets/projects/jtm1.jpg' // Path gambar
                   ),
               const SizedBox(height: 20),
               _buildSession(
