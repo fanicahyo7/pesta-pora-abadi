@@ -101,16 +101,19 @@ final kProjectsDescriptions = [
 final kContactIcons = [
   "assets/pesta-pora.png",
   "assets/pesta-pora.png",
+  "assets/pesta-pora.png",
 ];
 
 final kContactTitles = [
   "Gacoan Treacability System - DRY",
   "Optimum Buffer Stok Sparepart",
+  "List WO Project (Request Project ke DT)"
 ];
 
 final kContactDetails = [
   "Warehouse - Resto",
   "ENG",
+  "SCM"
 ];
 
 // final kContactLinks = [

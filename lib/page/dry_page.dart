@@ -136,6 +136,18 @@ class _DryPageState extends State<DryPage> {
               ),
               const SizedBox(height: 30),
               Text(
+                'ALUR',
+                style: GoogleFonts.montserrat(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 10),
+              Center(
+                child: ImageZoomWidget(imagePath: 'assets/projects/incoming.jpg'),
+              ),
+              const SizedBox(height: 30),
+              Text(
                 'TIMELINE PROGRESS PEMBUATAN',
                 style: GoogleFonts.montserrat(
                   fontSize: 20,
@@ -159,39 +171,43 @@ class TimelineProgress extends StatelessWidget {
       children: [
         TimelineTile(
           title: 'Analisis Kebutuhan',
-          subtitle: 'Mengumpulkan data sparepart dan menganalisis kebutuhan untuk sistem inventory.',
-          date: 'Januari 2023',
+          subtitle:
+              'Mengumpulkan data sparepart dan menganalisis kebutuhan untuk sistem inventory.',
+          date: 'Mei 2024',
           status: TimelineStatus.completed,
           isFirst: true,
         ),
         TimelineTile(
           title: 'Desain Sistem',
           subtitle: 'Merancang struktur database dan desain UI/UX aplikasi.',
-          date: 'Februari 2023',
+          date: 'Mei 2024',
           status: TimelineStatus.completed,
         ),
         TimelineTile(
           title: 'Pengembangan',
           subtitle: 'Mengimplementasikan desain sistem ke dalam kode aplikasi.',
-          date: 'Maret - April 2023',
+          date: 'Mei - Juni 2024',
           status: TimelineStatus.completed,
         ),
         TimelineTile(
           title: 'Pengujian di Warehouse',
-          subtitle: 'Melakukan uji coba di Warehouse oleh pengguna dan perbaikan bug.',
-          date: 'Mei 2023',
+          subtitle:
+              'Melakukan uji coba di Warehouse oleh pengguna dan perbaikan bug.',
+          date: 'Juli 2024',
           status: TimelineStatus.inProgress,
         ),
         TimelineTile(
           title: 'Pengujian di beberapa Resto',
-          subtitle: 'Melakukan uji coba di Resto oleh pengguna dan perbaikan bug.',
-          date: 'Mei 2023',
+          subtitle:
+              'Melakukan uji coba di Resto oleh pengguna dan perbaikan bug.',
+          date: '? 2024',
           status: TimelineStatus.inProgress,
         ),
         TimelineTile(
           title: 'Peluncuran',
-          subtitle: 'Aplikasi siap digunakan oleh seluruh pengguna di Warehouse dan Resto.',
-          date: 'Juni 2023',
+          subtitle:
+              'Aplikasi siap digunakan oleh seluruh pengguna di Warehouse dan Resto.',
+          date: '? 2024',
           status: TimelineStatus.inProgress,
           isLast: true,
         ),
@@ -292,6 +308,41 @@ class TimelineTile extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ImageZoomWidget extends StatefulWidget {
+  final String imagePath;
+
+  const ImageZoomWidget({super.key, required this.imagePath});
+
+  @override
+  _ImageZoomWidgetState createState() => _ImageZoomWidgetState();
+}
+
+class _ImageZoomWidgetState extends State<ImageZoomWidget> {
+  double _scale = 1.0;
+  double _previousScale = 1.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onScaleStart: (ScaleStartDetails details) {
+        _previousScale = _scale;
+        setState(() {});
+      },
+      onScaleUpdate: (ScaleUpdateDetails details) {
+        _scale = _previousScale * details.scale;
+        setState(() {});
+      },
+      onScaleEnd: (ScaleEndDetails details) {
+        _previousScale = 1.0;
+      },
+      child: Transform.scale(
+        scale: _scale,
+        child: Image.asset(widget.imagePath),
       ),
     );
   }

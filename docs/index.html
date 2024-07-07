@@ -9,24 +9,20 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Satyam Goyal">
+  <meta name="apple-mobile-web-app-title" content="Fani Dwi Cahyo">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <link rel="icon" type="image/png" href="/docs/favicon.png"/>
   <meta name="theme-color" content="#ffffff">
 
   <title>Fani Dwi Cahyo</title>
   <link rel="manifest" href="manifest.json">
 
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177827766-1"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-177827766-1');
   </script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -54,10 +50,14 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=566679627');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1663299016');
       });
     }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
+  <script src="https://unpkg.com/canvaskit-wasm@0.23.0/bin/full/canvaskit.js"></script>
+<script>
+  window.flutterWebRenderer = 'canvaskit';
+</script>
 </body>
 </html>

@@ -3,7 +3,6 @@ import '../../model/model.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AboutTab extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -12,7 +11,7 @@ class AboutTab extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(
           horizontal: width * 0.02, vertical: height * 0.02),
-      height: height*1.4,
+      height: height * 1.4,
       color: Colors.grey[900],
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,7 +201,6 @@ class AboutTab extends StatelessWidget {
                       ),
                     ],
                   )),
-              // Expanded(flex: 1, child: Text('wkwkwkwkw'))
               // Expanded(
               //   // flex: 3,
               //   child: AboutMeText(
@@ -218,7 +216,6 @@ class AboutTab extends StatelessWidget {
           SizedBox(
             height: height * 0.04,
           ),
-          
         ],
       ),
     );

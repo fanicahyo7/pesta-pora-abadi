@@ -7,10 +7,6 @@ class SosialisasiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Laporan Sosialisasi'),
-        backgroundColor: Colors.blueAccent,
-      ),
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
         child: SingleChildScrollView(
@@ -19,7 +15,7 @@ class SosialisasiPage extends StatelessWidget {
             children: [
               Center(
                 child: Text(
-                  "Laporan Sosialisasi Gacoan Treacability System - Frozen",
+                  "Sosialisasi Gacoan Treacability System - Frozen",
                   style: GoogleFonts.montserrat(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -30,74 +26,63 @@ class SosialisasiPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               _buildSession(
-                'Sesi 1: Sosialisasi di Produksi',
-                'Tanggal: 1 Juni 2024',
-                'Tempat: Resto Produksi',
-                [
-                  '1. Pengenalan Sistem dan Tujuan Sosialisasi',
-                  '2. Demonstrasi Penggunaan Aplikasi',
-                  '3. Sesi Tanya Jawab dan Diskusi',
-                  '4. Penutup dan Informasi Kontak',
-                ],
-                [
-                  'Tim Produksi: John Doe, Jane Smith',
-                ],
-                'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim produksi. Kegiatan berjalan dengan lancar, diakhiri dengan sesi tanya jawab.',
-                'assets/images/produksi.jpg'  // Path gambar
-              ),
+                  'Sesi 1: Sosialisasi di Produksi',
+                  'Tanggal: 15 Mei 2024',
+                  'Tempat: Produksi',
+                  [
+                    '1. Pengenalan Sistem dan Tujuan Sosialisasi',
+                    '2. Penginsatalan Device',
+                    '3. Demonstrasi Penggunaan Aplikasi',
+                  ],
+                  [
+                    'Peserta : PIC Produksi',
+                  ],
+                  'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim produksi. Kegiatan berjalan dengan lancar.',
+                  'assets/images/produksi.jpg'),
               const SizedBox(height: 20),
               _buildSession(
-                'Sesi 2: Sosialisasi di Warehouse',
-                'Tanggal: 5 Juni 2024',
-                'Tempat: Resto Warehouse',
-                [
-                  '1. Pengenalan Sistem dan Tujuan Sosialisasi',
-                  '2. Demonstrasi Penggunaan Aplikasi',
-                  '3. Sesi Tanya Jawab dan Diskusi',
-                  '4. Penutup dan Informasi Kontak',
-                ],
-                [
-                  'Tim Warehouse: Alice Johnson, Bob Brown',
-                ],
-                'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim warehouse. Kegiatan berjalan dengan lancar, dengan penekanan pada demonstrasi aplikasi.',
-                'assets/images/warehouse.jpg'  // Path gambar
-              ),
+                  'Sesi 2: Sosialisasi di Warehouse',
+                  'Tanggal: 15 Mei 2024',
+                  'Tempat: Warehouse',
+                  [
+                    '1. Pengenalan Sistem dan Tujuan Sosialisasi',
+                    '2. Penginsatalan Device',
+                    '3. Demonstrasi Penggunaan Aplikasi',
+                  ],
+                  [
+                    'Peserta : PIC INCOMING dan OUTGOING',
+                  ],
+                  'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim warehouse. Kegiatan berjalan dengan lancar.',
+                  'assets/images/warehouse.jpg' // Path gambar
+                  ),
               const SizedBox(height: 20),
               _buildSession(
-                'Sesi 3: Sosialisasi di Malang dan Batu',
-                'Tanggal: 10 Juli 2024',
-                'Tempat: Resto Malang dan Resto Batu',
-                [
-                  '1. Pengenalan Sistem dan Tujuan Sosialisasi',
-                  '2. Demonstrasi Penggunaan Aplikasi',
-                  '3. Sesi Tanya Jawab dan Diskusi',
-                  '4. Penutup dan Informasi Kontak',
-                ],
-                [
-                  'Tim Produksi: John Doe, Jane Smith',
-                  'Tim Warehouse: Alice Johnson, Bob Brown',
-                ],
-                'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim produksi dan warehouse di Resto Malang dan Batu. Kegiatan berjalan dengan lancar, diakhiri dengan sesi tanya jawab.',
-                'assets/images/malang_batu.jpg'  // Path gambar
-              ),
+                  'Sesi 3: Sosialisasi di RESTO JATIM 1',
+                  'Tanggal: 16-17 Mei 2024',
+                  'Tempat: Resto Gacoan Malang Sukun,Jakarta,Dinoyo,Batu',
+                  [
+                    '1. Pengenalan Sistem dan Tujuan Sosialisasi',
+                    '2. Memastikan Device dapat menjalankan aplikasi',
+                    '3. Demonstrasi Penggunaan Aplikasi',
+                  ],
+                  ['Peserta : SM,Stocker'],
+                  'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim Resto jatim 1 (malang). Kegiatan berjalan dengan lancar.',
+                  'assets/images/malang_batu.jpg' // Path gambar
+                  ),
               const SizedBox(height: 20),
               _buildSession(
-                'Sesi 4: Sosialisasi di Surabaya',
-                'Tanggal: 25 Juli 2024',
-                'Tempat: Resto Surabaya',
-                [
-                  '1. Pengenalan Sistem dan Tujuan Sosialisasi',
-                  '2. Demonstrasi Penggunaan Aplikasi',
-                  '3. Sesi Tanya Jawab dan Diskusi',
-                  '4. Penutup dan Informasi Kontak',
-                ],
-                [
-                  'Tim Produksi: Emily Davis, Michael Wilson',
-                  'Tim Warehouse: Sarah Parker, David Brown',
-                ],
-                'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim produksi dan warehouse di Resto Surabaya. Kegiatan berjalan dengan lancar, dengan penekanan pada demonstrasi aplikasi dan sesi tanya jawab.',
-                'assets/images/surabaya.jpg'  // Path gambar
-              ),
+                  'Sesi 4: Sosialisasi di JATIM 2',
+                  'Tanggal: 14 Juni 2024',
+                  'Tempat: Resto Gacoan Surabaya Kenjeran',
+                  [
+                    '1. Pengenalan Sistem dan Tujuan Sosialisasi',
+                    '2. Memastikan Device dapat menjalankan aplikasi',
+                    '3. Demonstrasi Penggunaan Aplikasi',
+                  ],
+                  ['Peserta : SM,Stocker'],
+                  'Sosialisasi ini dilakukan untuk mengenalkan aplikasi kepada tim Resto jatim 2 (surabaya, sidoarjo, gresik, madura, mojokerto). Kegiatan berjalan dengan lancar.',
+                  'assets/projects/sosialisasi.jpeg' // Path gambar
+                  ),
             ],
           ),
         ),
@@ -105,7 +90,14 @@ class SosialisasiPage extends StatelessWidget {
     );
   }
 
-  Widget _buildSession(String title, String date, String location, List<String> agenda, List<String> participants, String summary, String imagePath) {
+  Widget _buildSession(
+      String title,
+      String date,
+      String location,
+      List<String> agenda,
+      List<String> participants,
+      String summary,
+      String imagePath) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -149,10 +141,12 @@ class SosialisasiPage extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        ...participants.map((item) => Text(
-          item,
-          style: GoogleFonts.montserrat(fontSize: 16),
-        )).toList(),
+        ...participants
+            .map((item) => Text(
+                  item,
+                  style: GoogleFonts.montserrat(fontSize: 16),
+                ))
+            .toList(),
         const SizedBox(height: 20),
         Text(
           'Ringkasan:',
